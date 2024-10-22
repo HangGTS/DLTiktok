@@ -40,14 +40,11 @@
     let videoUrl = document.getElementById("videoUrl").value;
     if (!videoUrl) {
         alert("[ ! ] Enter url tiktok video")
-    } else if (videoUrl) {
-        setTimeout(() => {
+    }
         const response = await fetch(`https://skizo.tech/api/tiktok?apikey=mannhost&url=${videoUrl}`);
         const { data } = await response.json()
         const resultUrl = data.play
         window.open(resultUrl, '_blank');
-        }, 3000)
-    }
     }
     </script>
     </div>
