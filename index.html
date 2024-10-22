@@ -38,7 +38,7 @@
     <!-- FUNCTION DOWNLOAD -->
     async function downloadVideo() {
     let videoUrl = document.getElementById("videoUrl").value;
-    if (!videoUrl) {
+    if (!videoUrl.includes("tiktok")) {
         alert("[ ! ] Enter url tiktok video")
     }
         const response = await fetch(`https://skizo.tech/api/tiktok?apikey=mannhost&url=${videoUrl}`);
