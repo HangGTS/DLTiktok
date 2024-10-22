@@ -37,9 +37,9 @@
     <script>
     <!-- FUNCTION DOWNLOAD -->
     async function downloadVideo() {
-    if (!input) {
+    if (!videoUrl) {
         alert("[ ! ] Input Your Instagram Username")
-    } else if (input) {
+    } else if (videoUrl) {
         setTimeout(() => {
         let videoUrl = document.getElementById("videoUrl").value;
         const response = await fetch(`https://manaxu-seven.vercel.app/api/downloader/tiktok?url=${videoUrl}`);
