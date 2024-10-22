@@ -2,6 +2,8 @@
 	
 <!-- Made by MannR. -->
 
+<!-- Wm nya jangan dihapus njirt -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,12 +37,18 @@
     <script>
     <!-- FUNCTION DOWNLOAD -->
     async function downloadVideo() {
-        	let videoUrl = document.getElementById("videoUrl").value;
-        	const response = await fetch(`https://skizo.tech/api/tiktok?apikey=YOUR_KEY&url=${videoUrl}`);
-            const data = await response.json()
-            const resultUrl = data.data.play;
-            window.open(resultUrl, '_blank');
-        }
+    if (!input) {
+        alert("[ ! ] Input Your Instagram Username")
+    } else if (input) {
+        setTimeout(() => {
+        let videoUrl = document.getElementById("videoUrl").value;
+        const response = await fetch(`https://manaxu-seven.vercel.app/api/downloader/tiktok?url=${videoUrl}`);
+        const { result } = await response.json()
+        const resultUrl = result.play
+        window.open(resultUrl, '_blank');
+        }, 3000)
+    }
+    }
     </script>
     </div>
     </div>
